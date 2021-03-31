@@ -1,0 +1,22 @@
+﻿@model Product
+<div class="col-md-3" style="margin-top:2%">
+    <div class="card">
+        <div class="view zoom overlay">
+            <img class="img-fluid w-100" src="~/images/@Model.ImageUrl" alt="@Model.ImageUrl">
+        </div>
+        <div class="card-body text-center">
+
+            <h5>Stokta son @Model.Piece adet kaldı.</h5>
+            <p class="small text-muted text-uppercase mb-2">@Model.Description</p>
+            <hr>
+            <h6 class="mb-3">
+                <span class="text-danger mr-1"><i class="fas fa-lira-sign"></i>@Model.Price</span>
+            </h6>
+            <hr>
+            <p class="small text-muted text-uppercase mb-2">Barkot: @Model.Barcode</p>
+        </div>
+
+    </div>
+</div>
+<!-- Card --> 
+
