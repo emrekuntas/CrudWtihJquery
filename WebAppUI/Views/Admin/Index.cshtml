@@ -134,15 +134,17 @@
             url: "/Admin/SaveProduct",
             data: data,
             success: function (result) {
-               /* alert("Başarılı kayıt");*/
-                window.location.href = "/Admin/Index";
-                $("#MyModal").modal("hide");
+                if (result == true) {
+                    alert("Başarılı kayıt");
+                    window.location.href = "/Admin/Index";
+                    $("#MyModal").modal("hide");
+                }
+                else
+                {
+                    alert("Hatalı kayıt");
+                    $("#MyModal").modal("show");
+                }
             },
-            error: function () {
-                /*alert("Hatalı kayıt");*/
-                $("#MyModal").modal("show");
-            }
-
         })
     })
 
